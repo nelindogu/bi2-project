@@ -37,7 +37,7 @@ uv run python run_permutation_cf.py -c 4
 uv run python run_bootstrap_cf.py -c 6
 uv run python generate_figures.py
 ```
-`-c` is the number of CPU cores. `generate_figures.py` ends with an error, but the figure (`figures_after/fpr_t1er_cf_combined.pdf`) is already created at that point.
+`-c` is the number of CPU cores. Besides Fig. 5, `generate_figures.py` also tries to plot a time-based variant of this experiment, which is not in the paper and which we did not run. The script therefore stops with a "file not found" error at the end. Fig. 5 (`figures_after/fpr_t1er_cf_combined.pdf`) is created before that.
 
 **Result:** identical to Fig. 5 in the paper. At α = 0.05, the Type I error rate is 0.032 for the permutation test and 0.26 for the bootstrap test.
 
